@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <select id = 'voiceSelect'></select>
+  <button id="startText">음성인식시작</button>
+  <button id="stopText">음성인식종료</button>
   <input id="input"></input>
-  <button id="button">실행</button>
-  <button id="stop">멈춤</button>
+  <button id="startSpeech">실행</button>
+  <button id="stopSpeech">멈춤</button>
   <div id="rate-control">
     <label for="rate">Rate:</label>
     <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
@@ -22,6 +23,8 @@
     <label for="volume">volume:</label>
     <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
   </div>
+  <button id="startRecord">녹음시작</button>
+  <button id="stopRecord">녹음종료</button>
   <body>
     <script src="script.js"></script>
     <style>
