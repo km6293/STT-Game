@@ -28,6 +28,9 @@ let score = 0;
 let obstacleSpeed = 1; // 장애물 이동 속도
 let obstacleInterval; // 장애물 이동 setInterval ID
 let recognition; // 음성인식 객체
+let playerSpeed = 1500;
+let readList = document.getElementById('txt-file');
+let randomNumber = 0;
 
 // 음성인식 지원 여부 확인
 if (!("webkitSpeechRecognition" in window)) {
@@ -39,15 +42,13 @@ if (!("webkitSpeechRecognition" in window)) {
   // 연속적으로 음성 인식 결과를 받아오기 위해 interimResults 속성을 true로 설정.
   recognition.interimResults = true;
   recognition.onresult = function (event) {
-    // 난수 생성
-    let randomNumber =
-      Math.floor(Math.random() * (vocabularyList.length - 1)) + 1;
-
-    // const transcript = event.results[event.results.length - 1][0].transcript;
+    const transcript = event.results[event.results.length - 1][0].transcript;
     // console.log(event.results[event.results.length - 1]);
-
     if (event.results[event.results.length - 1].isFinal === false) {
-      playerJump();
+      console.log(transcript, vocabularyList[randomNumber])
+      if(transcript == vocabularyList[randomNumber]){
+        playerJump();
+      }
     }
   }; // 음성인식 시작
 }
@@ -62,10 +63,10 @@ function stopRecognition() {
 
 // 플레이어 점프
 function playerJump() {
-  player.style.bottom = "100px";
+  player.style.bottom = "120px";
   setTimeout(() => {
     player.style.bottom = "0px";
-  }, 200);
+  }, playerSpeed);
 }
 
 // 게임 시작
@@ -74,14 +75,23 @@ function startGame() {
   score = 0;
   scoreDisplay.innerText = "점수: " + score;
   obstacle.style.right = "-50px";
+
+  // 난수 생성  
+  randomNumber = Math.floor(Math.random() * vocabularyList.length);
+  readList.innerHTML = vocabularyList[randomNumber];
+
   obstacleInterval = setInterval(function () {
-    obstacle.style.right =
-      parseInt(obstacle.style.right) + obstacleSpeed + "px";
+    obstacle.style.right = parseInt(obstacle.style.right) + obstacleSpeed + "px";
     if (parseInt(obstacle.style.right) >= gameContainer.offsetWidth - 100) {
+
+      randomNumber = Math.floor(Math.random() * vocabularyList.length);  
+      readList.innerHTML = vocabularyList[randomNumber];
+
       obstacle.style.right = "-50px";
       score++;
       scoreDisplay.innerText = "점수: " + score;
       obstacleSpeed += 0.5;
+      playerSpeed -= 70;
     }
     if (checkCollision(player, obstacle)) {
       endGame();
