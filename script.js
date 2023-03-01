@@ -31,6 +31,7 @@ let recognition; // 음성인식 객체
 let playerSpeed = 1500;
 let readList = document.getElementById('txt-file');
 let randomNumber = 0;
+let quizText = document.getElementById('quiz-text');
 
 // 음성인식 지원 여부 확인
 if (!("webkitSpeechRecognition" in window)) {
