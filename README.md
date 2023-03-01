@@ -1,5 +1,7 @@
-# STT (Speech-to-Text) Game
-브라우저에서 제공하는 Web Speech API를 사용하여 음성 출력 기능 게임 제작 
+# STT(Speech-to-Text) Game
+
+#### 설명 : 홈페이지만 제작하다가 색다른게 없을까 하여 Javascript API를 찾던 중 브라우저에서 제공하는 Web Speech API를 알게되어서 음성 출력 기능 게임 제작 하게 됨. 
+#### 제작 기간 : 2023/02 ~ 일주일 이내
 
 
 ## 게임 설명
