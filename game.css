@@ -90,6 +90,10 @@ h1 {
   cursor: pointer;
 }
 
+.explanation{
+  /* padding-top: 10%; */
+}
+
 /* 다크모드 스타일 */
 body.dark-mode {
   background-color: #222;
@@ -103,6 +107,9 @@ button.dark-mode {
 
 #txt-file {
   color: #333;
+  padding-top: 3%;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #game-container.dark-mode {

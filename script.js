@@ -107,6 +107,15 @@ function endGame() {
   gameStarted = false;
   popup.style.display = "block";
   finalScoreDisplay.innerText = score;
+  if(score == 0){
+    quizText.innerText = '뭐하십니까?';
+  }else if(score < 3){
+    quizText.innerText = '당신은 외국인입니까?';
+  }else if(score < 6){
+    quizText.innerText = '조금 치시는군요.';
+  }else{
+    quizText.innerText = '인정하겠습니다.';
+  }
 }
 
 // 재시작

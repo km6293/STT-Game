@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>음성인식 게임</title>
+    <title>Syllable Superstar</title>
     <link rel="stylesheet" type="text/css" href="game.css" />
   </head>
   <body>
-    <h1>음성인식 게임</h1>
+    <h1>Syllable Superstar</h1>
     <div id="score">점수: 0</div>
     <button id="start-btn">START</button>
     <div id="game-container">
@@ -13,9 +13,11 @@
       <div id="obstacle"></div>
       <div id="txt-file">단어가 나옵니다!</div>
     </div>
-
+    <div id="explanation">한글 음절을 인식하고 타이밍에 맞춰 점프하여 장애물을 피해야 하는 게임</div>
     <div id="popup">
-      <p>GAME OVER! 점수: <span id="final-score"></span></p>
+      <p>GAME OVER!</p>
+      점수: <span id="final-score"></span><br/><br/>
+      <span id="quiz-text"></span><br/>
       <button id="yes-btn">다시하기</button>
     </div>
     <button id="dark-mode-btn">다크모드: Off</button>
