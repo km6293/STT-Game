@@ -1,5 +1,14 @@
 # STT (Speech-to-Text) Game
 브라우저에서 제공하는 Web Speech API를 사용하여 음성 출력 기능 게임 제작 
-![start](https://user-images.githubusercontent.com/69450660/222073722-de349281-1c34-406e-a07f-41191cb45bb6.gif)
-![jump](https://user-images.githubusercontent.com/69450660/222073741-61bb0b01-0204-4798-9a9e-dabf49a44034.gif)
-![end](https://user-images.githubusercontent.com/69450660/222073761-bee356e2-9d30-4e95-9b76-ec509ef6c02b.gif)
+
+
+## 게임 설명
+
+### 1. start 버튼을 누른 후, 랜덤으로 단어가 나온다.
+![Start](https://user-images.githubusercontent.com/69450660/222075344-732d192d-5141-44a4-8cd0-da03cb4f8bc1.gif)
+
+### 2. 랜덤으로 나온 단어가 Web Speech API의 출력 값과 같을 경우 점프를 한다.
+![Jump](https://user-images.githubusercontent.com/69450660/222075356-1f4a0aa0-d671-430d-b288-09f40d910f49.gif)
+
+### 3. 점프를 못하고 장애물에 부딪힐 경우 Game Over이 된다.
+![End](https://user-images.githubusercontent.com/69450660/222075364-4879e253-423d-45cb-9422-d9d2da7f4839.gif)
